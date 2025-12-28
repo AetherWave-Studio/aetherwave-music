@@ -1,30 +1,47 @@
 {
-  "expo": {
-    "name": "aetherwave-music",
-    "slug": "aetherwave-music",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "newArchEnabled": true,
-    "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "expo": {
+        "name": "AetherWave Music",
+        "slug": "aetherwave-music",
+        "version": "1.0.0",
+        "orientation": "portrait",
+        "icon": "./assets/icon.png",
+        "userInterfaceStyle": "dark",
+        "newArchEnabled": true,
+        "splash": {
+            "image": "./assets/splash-icon.png",
+            "resizeMode": "contain",
+            "backgroundColor": "#0A0A0F"
+        },
+        "ios": {
+            "supportsTablet": false,
+            "bundleIdentifier": "com.aetherwave.music",
+            "infoPlist": {
+                "NSMicrophoneUsageDescription": "AetherWave Music needs microphone access to hear your voice requests.",
+                "NSSpeechRecognitionUsageDescription": "AetherWave Music uses speech recognition to understand what music you want."
+            }
+        },
+        "android": {
+            "adaptiveIcon": {
+                "foregroundImage": "./assets/adaptive-icon.png",
+                "backgroundColor": "#0A0A0F"
+            },
+            "package": "com.aetherwave.music",
+            "permissions": [
+                "RECORD_AUDIO",
+                "MODIFY_AUDIO_SETTINGS"
+            ],
+            "edgeToEdgeEnabled": true
+        },
+        "web": {
+            "favicon": "./assets/favicon.png"
+        },
+        "plugins": [
+            [
+                "expo-av",
+                {
+                    "microphonePermission": "Allow AetherWave Music to access your microphone."
+                }
+            ]
+        ]
     }
-  }
 }
