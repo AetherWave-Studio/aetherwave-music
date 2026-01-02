@@ -1,8 +1,7 @@
 export const CONFIG = {
     // API
-    API_BASE_URL: __DEV__
-        ? 'http://localhost:3000/api'
-        : 'https://api.aetherwave.com/api',
+    API_BASE_URL: 'https://api.kie.ai/api/v1',
+    API_KEY: 'b1bde5cbe1b55cf0c492afe2b97fb133', // Set your Kie.ai API key here
 
     // Cache
     CACHE_SIZE: 4,                           // 4 scenarios

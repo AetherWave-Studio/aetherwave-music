@@ -1,15 +1,16 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
-import HomeScreen from './src/screens/HomeScreen';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { StyleSheet } from 'react-native';
+import { AppNavigator } from './src/navigation';
 import { COLORS } from './src/constants/theme';
 
 export default function App() {
     return (
-        <View style={styles.container}>
+        <GestureHandlerRootView style={styles.container}>
             <StatusBar style="light" />
-            <HomeScreen />
-        </View>
+            <AppNavigator />
+        </GestureHandlerRootView>
     );
 }
 
